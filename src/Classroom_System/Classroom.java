@@ -5,11 +5,11 @@ import Classroom_System.*;
 import java.util.ArrayList;
 
 public class Classroom {
-  private Teacher theTeacher;
+  private Teacher teacher;
   private ArrayList<Student> students;
 
   public Classroom(Teacher teacher) {
-    this.theTeacher = teacher;
+    this.teacher = teacher;
 
     students = new ArrayList<Student>();
   }
@@ -18,8 +18,16 @@ public class Classroom {
     students.add(newStudent);
   }
 
+  public void updateStudentGrade(String fullName, double newGrade) {
+    
+  }
+
+  public Teacher getTeacher() {
+    return teacher;
+  }
+
   public void setTeacher(Teacher newTeacher) {
-    this.theTeacher = newTeacher;
+    this.teacher = newTeacher;
   }
 
   public int getSize() {

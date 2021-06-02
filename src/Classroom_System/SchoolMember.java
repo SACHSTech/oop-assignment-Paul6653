@@ -22,4 +22,8 @@ public class SchoolMember {
   public String getLastName() {
     return lastName;
   }
+
+  public String getFullName() {
+    return firstName + " " + lastName;
+  }
 }
