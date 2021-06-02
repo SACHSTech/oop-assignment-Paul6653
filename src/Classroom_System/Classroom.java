@@ -26,6 +26,12 @@ public class Classroom {
     }
   }
 
+  public void printList() {
+    for (int i = 0; i < students.size(); i++) {
+      System.out.println(students.get(i).getFullName()+ ": " +students.get(i).getClassGrade()+ "%");
+    }
+  }
+
   public Teacher getTeacher() {
     return teacher;
   }

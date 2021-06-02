@@ -34,7 +34,6 @@ public class Main {
       String choice = key.readLine();
 
       System.out.println();
-      System.out.println();
 
       if (choice.equals("1")) {
 
@@ -69,8 +68,14 @@ public class Main {
         classroom.updateStudentGrade(fullName, grade);
 
       } else if (choice.equals("3")) {
-
+        
+        System.out.println("List of Student Marks:")
+        classroom.printList();
+        
       } else if (choice.equals("4")) {
+        
+        System.out.print("Enter the new teacher's first name: ")
+        String fName = key.readLine();
 
       } else {
         System.exit(0);
