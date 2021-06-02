@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) throws IOException{
-    Teacher teacher1 = new Teacher("Eric", "Fabroa", 30, 50000.00);
+    Teacher teacher1 = new Teacher("Dave", "Krtzy", 30, 50000.00);
 
     Classroom classroom = new Classroom(teacher1);
 
@@ -21,9 +21,10 @@ public class Main {
       System.out.println("Choose an option:");
       System.out.println("1 - Add a new student");
       System.out.println("2 - Update a student's grade");
-      System.out.println("3 - Print a list of student marks");
-      System.out.println("4 - Replace teacher");
-      System.out.println("5 - Quit");
+      System.out.println("3 - Replace teacher");
+      System.out.println("4 - Print a list of student marks");
+      System.out.println("5 - See Personal Information");
+      System.out.println("6 - Quit");
       
       String choice = key.readLine();
 
@@ -60,14 +61,12 @@ public class Main {
         double grade = Double.parseDouble(key.readLine());
 
         classroom.updateStudentGrade(fullName, grade);
+        
+        System.out.println();
+        System.out.println(fullName+ "'s grade is now " +grade+ "%");
 
       } else if (choice.equals("3")) {
-        
-        System.out.println("List of Student Marks:");
-        classroom.printList();
-        
-      } else if (choice.equals("4")) {
-        
+
         System.out.print("Enter the new teacher's first name: ");
         String fName = key.readLine();
 
@@ -81,6 +80,18 @@ public class Main {
         double salary = Double.parseDouble(key.readLine());
 
         classroom.setTeacher(new Teacher(fName, lName, age, salary));
+        
+      } else if (choice.equals("4")) {
+
+        System.out.println("List of Student Marks:");
+        classroom.printList();
+
+      } else if (choice.equals("5")) {
+
+        System.out.print("Enter the full name of the person whose personal information should be printed: ");
+        String fullName = key.readLine();
+
+        classroom.personalInformation(fullName);
 
       } else {
         System.exit(0);

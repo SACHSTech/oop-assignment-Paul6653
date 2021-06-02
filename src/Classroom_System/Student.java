@@ -15,6 +15,10 @@ public class Student extends SchoolMember {
     this.classGrade = classGrade;
   }
 
+  public int getGradeYear() {
+    return gradeYear;
+  }
+
   public double getClassGrade() {
     return classGrade;
   }

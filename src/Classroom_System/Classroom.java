@@ -51,7 +51,23 @@ public class Classroom {
       theAverage += students.get(i).getClassGrade();
     }
 
-    theAverage = theAverage/students.size();
+    if (students.size() != 0) {
+      theAverage = theAverage/students.size();
+    }
+
     return theAverage;
+  }
+
+  public void personalInformation(String fullName) {
+    if (fullName.equalsIgnoreCase(teacher.getFullName())) {
+      System.out.println("Age: " +teacher.getAge());
+      System.out.println("Salary: " +teacher.getSalary());
+    }
+    for (int i = 0; i < students.size(); i++) {
+      if (fullName.equalsIgnoreCase(students.get(i).getFullName())) {
+        System.out.println("Age: " +students.get(i).getAge()); 
+        System.out.println("Grade:" +students.get(i).getGradeYear());
+      }
+    }
   }
 }

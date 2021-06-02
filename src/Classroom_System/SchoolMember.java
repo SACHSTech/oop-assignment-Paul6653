@@ -26,4 +26,8 @@ public class SchoolMember {
   public String getFullName() {
     return firstName + " " + lastName;
   }
+
+  public int getAge() {
+    return age;
+  }
 }

@@ -13,7 +13,7 @@ public class Teacher extends SchoolMember {
     this.salary = salary;
   }
 
-  public String toString() {
-    return super.getFirstName();
+  public double getSalary() {
+    return salary;
   }
 }
