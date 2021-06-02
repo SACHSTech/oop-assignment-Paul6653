@@ -8,15 +8,9 @@ public class Main {
   public static void main(String[] args) throws IOException{
     Teacher teacher1 = new Teacher("Eric", "Fabroa", 30, 50000.00);
 
-    Student student1 = new Student("a", "b", 15, 10, 80);
-    Student student2 = new Student("a", "c", 15, 10, 85);
-
     Classroom classroom = new Classroom(teacher1);
 
     BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
-
-    classroom.addStudent(student1);
-    classroom.addStudent(student2);
 
     while (true) {
       System.out.println("Classroom Teacher: " +classroom.getTeacher().getFullName());
@@ -69,13 +63,24 @@ public class Main {
 
       } else if (choice.equals("3")) {
         
-        System.out.println("List of Student Marks:")
+        System.out.println("List of Student Marks:");
         classroom.printList();
         
       } else if (choice.equals("4")) {
         
-        System.out.print("Enter the new teacher's first name: ")
+        System.out.print("Enter the new teacher's first name: ");
         String fName = key.readLine();
+
+        System.out.print("Enter the new teacher's last name: ");
+        String lName = key.readLine();
+
+        System.out.print("Enter the new teacher's age: ");
+        int age = Integer.parseInt(key.readLine());
+
+        System.out.print("Enter the new teacher's salary: ");
+        double salary = Double.parseDouble(key.readLine());
+
+        classroom.setTeacher(new Teacher(fName, lName, age, salary));
 
       } else {
         System.exit(0);
