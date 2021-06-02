@@ -6,17 +6,20 @@ import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) throws IOException{
+    //Initialize teacher and classroom
     Teacher teacher1 = new Teacher("Dave", "Krtzy", 30, 50000.00);
-
     Classroom classroom = new Classroom(teacher1);
 
     BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
+    //Main Menu
     while (true) {
+      //Basic Classroom Information
       System.out.println("Classroom Teacher: " +classroom.getTeacher().getFullName());
       System.out.println("# of Students: " +classroom.getSize());
       System.out.println("Class Average: " +classroom.getAverage()+ "%");
 
+      //Classroom Modification Options
       System.out.println();
       System.out.println("Choose an option:");
       System.out.println("1 - Add a new student");
@@ -30,6 +33,7 @@ public class Main {
 
       System.out.println();
 
+      //According to option picked, modify and/or list classroom information
       if (choice.equals("1")) {
 
         System.out.print("Enter the student's first name: ");
