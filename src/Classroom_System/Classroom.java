@@ -21,4 +21,18 @@ public class Classroom {
   public void setTeacher(Teacher newTeacher) {
     this.theTeacher = newTeacher;
   }
+
+  public int getSize() {
+    return students.size();
+  }
+
+  public double getAverage() {
+    double theAverage = 0.0;
+
+    for (int i = 0; i < students.size(); i++) {
+      theAverage += students.get(i).getClassGrade();
+    }
+
+    return theAverage;
+  }
 }
