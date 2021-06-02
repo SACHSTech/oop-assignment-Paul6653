@@ -33,6 +33,7 @@ public class Classroom {
       theAverage += students.get(i).getClassGrade();
     }
 
+    theAverage = theAverage/students.size();
     return theAverage;
   }
 }
