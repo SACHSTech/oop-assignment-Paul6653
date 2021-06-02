@@ -19,7 +19,11 @@ public class Classroom {
   }
 
   public void updateStudentGrade(String fullName, double newGrade) {
-    
+    for (int i = 0; i < students.size(); i++) {
+      if (fullName.equalsIgnoreCase(students.get(i).getFullName())) {
+        students.get(i).setClassGrade(newGrade);
+      }
+    }
   }
 
   public Teacher getTeacher() {

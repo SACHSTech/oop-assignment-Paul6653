@@ -9,7 +9,7 @@ public class Main {
     Teacher teacher1 = new Teacher("Eric", "Fabroa", 30, 50000.00);
 
     Student student1 = new Student("a", "b", 15, 10, 80);
-    Student student2 = new Student("a", "b", 15, 10, 85);
+    Student student2 = new Student("a", "c", 15, 10, 85);
 
     Classroom classroom = new Classroom(teacher1);
 
@@ -29,7 +29,7 @@ public class Main {
       System.out.println("2 - Update a student's grade");
       System.out.println("3 - Print a list of student marks");
       System.out.println("4 - Replace teacher");
-      System.out.println("Any key  - Quit");
+      System.out.println("5 - Quit");
       
       String choice = key.readLine();
 
