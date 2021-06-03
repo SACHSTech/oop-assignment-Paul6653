@@ -3,7 +3,9 @@
 
 [*see instructions for details*](Instructions.md)
 
-![](https://cdn.discordapp.com/attachments/436698615868817408/849707169951121428/Screen_Shot_2021-06-02_at_13.52.14.png)
+![](https://cdn.discordapp.com/attachments/436698615868817408/849799709978787870/Screen_Shot_2021-06-02_at_20.00.18.png)
 
 ## Summary
 *Include a brief summary that describes your system that your are modelling*
+
+A classroom with a teacher and students. The classroom can be modified by adding new students, updating student grades, and replacing the teacher.

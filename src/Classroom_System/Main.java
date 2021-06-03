@@ -33,7 +33,7 @@ public class Main {
 
       System.out.println();
 
-      //According to option picked, modify and/or list classroom information
+      //According to option picked, modify class and/or list info
       if (choice.equals("1")) {
 
         System.out.print("Enter the student's first name: ");
